@@ -9,7 +9,7 @@ The more theorecal background is from another [project](https://github.com/brain
 
 
 ## Objectives/Goals
-The main goal of this project is to make me used to script, packaging Python code, making run Python script more easily on HPC for average user and containeraize the whole. This will help make it easy for an inexperience user to get everything from my Github repository and execute the script either on HPC or his/her personal machine.  
+The main goal of this project is to make me used to scripting, packaging Python code, making run Python script more easily on HPC for average user and containeraize the whole thing. This will help make it easy for inexperiences user to get everything from my Github repository and execute the script either on HPC or his/her personal machine.  
 - Take existing Python code for the seed to voxel correlation make a script that will make it easy to run from the terminal
 - Do the same thing but for the machine learning algorithm that will used the seed to voxel correlation to classify.
 - Used Git and Github to make version control of all the scripts.
