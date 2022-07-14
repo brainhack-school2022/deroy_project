@@ -27,7 +27,7 @@ The main goal of this project is to familiarize myself to scripting, packaging P
 
 
 ## Data
-There's no data, I won't with that per say, but more with code. Although, I will use the other [project](https://github.com/brainhack-school2022/Lajoie_project/blob/main/project_description.md) data to make sure everything works correctly.
+I won't work with data that per say, but more with code. Although, I will use the other [project](https://github.com/brainhack-school2022/Lajoie_project/blob/main/project_description.md) data to make sure everything works correctly.
 
 
 ## Deliverables
