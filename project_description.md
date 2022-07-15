@@ -35,3 +35,7 @@ I want to produce by the end of the project :
 - the script, packaging and containerization of at least the seed to voxel correlation code.
 - In the best case senario, I will do the same for the machine learning code.
 - some sort of tutorial (either a markdown file or a video) to explain to someone who has no background in computer science how to install everything and run the code.
+
+
+## Reference
+Gronenschild, E. H. B. M., Habets, P., Jacobs, H. I. L., Mengelers, R., Rozendaal, N., van Os, J., & Marcelis, M. (2012). The Effects of FreeSurfer Version, Workstation Type, and Macintosh Operating System Version on Anatomical Volume and Cortical Thickness Measurements. PLoS ONE, 7(6), e38234. https://doi.org/10.1371/journal.pone.0038234
