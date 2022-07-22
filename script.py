@@ -35,10 +35,10 @@ def main():
     for i in range(len(batch["seed"])):
         seed.append(tuple(batch["seed"][i]))
 
-        for j in range(0, len(ls_sub)):
+        for j in range(0, len(ls_fmri_file)):
             
-            seed_to_voxel_correlations, seed_to_correlations_img =
-            seed_voxel.S2V_function(ls_fmri_file[j], ls_confound_file[j],
+            seed_to_voxel_correlations, seed_to_correlations_img = (
+                seed_voxel.S2V_function(ls_fmri_file[j], ls_confound_file[j],
                                     seed[i], batch["radius"],
                                     batch["detrend_sphere"],
                                     batch["standardize_sphere"],
@@ -51,7 +51,7 @@ def main():
                                     batch["standardize"], batch["low_pass"],
                                     batch["high_pass"], batch["t_r"],
                                     batch["memory"], batch["memory_level"],
-                                    batch["verbose"])
+                                    batch["verbose"]))
 
             seed_voxel.plotting_correlations(seed_to_correlations_img, seed[i],
                                              batch["threshold_plotting"],

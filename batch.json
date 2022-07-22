@@ -1,7 +1,7 @@
 
 {
     "path_fmri_file":"/home/clauderic/",
-    "path_confound_file":"/home/clauderic,"
+    "path_confound_file":"/home/clauderic",
 
     "seed":[[-50, 8, 23], [-51, -42, 21], [-60, -6, 18]],
     "radius":8,
