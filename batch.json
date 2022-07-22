@@ -1,12 +1,39 @@
 
 {
-"fmri_file":"/home/clauderic/Maîtrise Psychologie/1re_année/3ieme_session/PSY 6983 - Projet en sciences des données neuronales/",
-"confound_file":"/home/clauderic/Maîtrise Psychologie/1re_année/3ieme_session/PSY 6983 - Projet en sciences des données neuronales/",
-"opIFG_coords":[[-50, 8, 23]],
-"planumtemp_coords":[[-51, -42, 21]],
-"pITG_coords":[[-54, -52, -10]],
-"img":"/home/clauderic/Maîtrise Psychologie/1re_année/3ieme_session/PSY 6983 - Projet en sciences des données neuronales/",
-"fwhm":1
+    "path_fmri_file":"/home/clauderic/",
+    "path_confound_file":"/home/clauderic,"
+
+    "seed":[[-50, 8, 23], [-51, -42, 21], [-60, -6, 18]],
+    "radius":8,
+    "detrend_sphere":true,
+    "standardize_sphere":true,
+    "low_pass_sphere":0.1,
+    "high_pass_sphere":0.01,
+    "t_r_sphere":2,
+    "memory_sphere":"nilearn_cache",
+    "memory_level_sphere":1,
+    "verbose_sphere":0,
+
+    "smoothing_fwhm":6,
+    "detrend":true,
+    "standardize":true,
+    "low_pass":0.1,
+    "high_pass":0.01,
+    "t_r":2,
+    "memory":"nilearn_cache",
+    "memory_level":1,
+    "verbose":0,
+
+    "threshold_plotting":0.5,
+    "vmax":1,
+
+    "marker_color":"g",
+    "marker_size":50,
+
+    "threshold_glass_brain":0.5,
+    "colorbar":true,
+    "plot_abs":false,
+    "display_mode":"lyrz",
+
+    "save_path":"/home/clauderic/"
 }
-
-
