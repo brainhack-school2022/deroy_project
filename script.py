@@ -27,7 +27,7 @@ def main():
     ls_fmri_file = [(file) for file in os.listdir(
         batch["path_fmri_file"]) if file[-3:] == "nii.gz"]
 
-    ls_confounf_file = [(file) for file in os.listdir(
+    ls_confound_file = [(file) for file in os.listdir(
         batch["path_confound_file"]) if file[-3:] == "txt"]
         
     seed = []
