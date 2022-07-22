@@ -12,11 +12,11 @@ import os
 import seed_voxel
 
 def main():
-    description = "this is a script that read a .txt file containing all the " \
-        "argument to use in Xanthy's seed to voxel correlation."
+    description = "this is a script that read a .json file containing all" \
+        " the argument to use in Xanthy's seed to voxel correlation."
 
     parser = ArgumentParser(__file__, description)
-    parser.add_argument("--batch", help="input the directory to the .txt file")
+    parser.add_argument("--batch", help="input the directory to the .json file")
 
     args = parser.parse_args()
 
