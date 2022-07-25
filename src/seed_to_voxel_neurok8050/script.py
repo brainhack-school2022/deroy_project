@@ -31,14 +31,14 @@ def main():
         batch["path_confound_file"]) if file[-3:] == "txt"]
         
     seed = []
-    
     for i in range(len(batch["seed"])):
         seed.append(tuple(batch["seed"][i]))
 
-        for j in range(0, len(ls_fmri_file)):
-            
+        
+    for i in range(0, len(ls_fmri_file)):
+        for j in range(0, len(seed)):
             seed_to_voxel_correlations, seed_to_correlations_img = (
-                seed_voxel.S2V_function(ls_fmri_file[j], ls_confound_file[j],
+            seed_voxel.S2V_function(ls_fmri_file[i], ls_confound_file[i],
                                     seed[i], batch["radius"],
                                     batch["detrend_sphere"],
                                     batch["standardize_sphere"],
@@ -52,6 +52,7 @@ def main():
                                     batch["high_pass"], batch["t_r"],
                                     batch["memory"], batch["memory_level"],
                                     batch["verbose"]))
+            
 
             seed_voxel.plotting_correlations(seed_to_correlations_img, seed[i],
                                              batch["threshold_plotting"],

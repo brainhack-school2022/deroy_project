@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/seed_to_voxel_neurok8050/__init__.py
+src/seed_to_voxel_neurok8050/script.py
+src/seed_to_voxel_neurok8050/seed_voxel.py
+src/seed_to_voxel_neurok8050.egg-info/PKG-INFO
+src/seed_to_voxel_neurok8050.egg-info/SOURCES.txt
+src/seed_to_voxel_neurok8050.egg-info/dependency_links.txt
+src/seed_to_voxel_neurok8050.egg-info/top_level.txt
