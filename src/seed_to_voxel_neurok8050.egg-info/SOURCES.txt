@@ -4,6 +4,7 @@ README.md
 pyproject.toml
 requirements.txt
 setup.py
+./requirements.txt
 src/seed_to_voxel_neurok8050/__init__.py
 src/seed_to_voxel_neurok8050/batch.json
 src/seed_to_voxel_neurok8050/script.py
