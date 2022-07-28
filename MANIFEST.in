@@ -1,3 +1,3 @@
 include ./requirements.txt
-include src/seed_to_voxel_neurok8050/batch.json
-include src/seed_to_voxel_neurok8050/xanthy_code.ipynb
+include ./src/seed_to_voxel_neurok8050/batch.json
+include ./src/seed_to_voxel_neurok8050/xanthy_code.ipynb
