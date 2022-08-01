@@ -22,6 +22,8 @@ This is what my terminal on my laptop looks like
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/terminal.png)
 
+So there is a couple of commands that will be usefull through out this tutorial or through your utilization of this package. The first command is `ls` and `ls -a`. `ls` is the command and `-a` is an option. Generally speaking commands have many different option and arguments which are two different things. `ls` is to list a directory given as an argument or if no argument is given it will list the directory you are at the moment when you call `ls`. A very nice thing in the terminal is the  `--help` option which give all sort of information about the command you called with the `--help` option. So you could type `ls --help` and the terminal will spill out a bunch of information on `ls` and how to use it. So if you tap `ls --help` and press `Enter` you will see that the `-a` option `do not ignore entries starting with .` which means that `ls` will list everything in the directory even the files starting with a `.`. Basically, you will have a list of everything in the directory. One more thing you can also type `man ls` this will print out the manual (this is what `man` stands for) of the `ls` or any other command you put after the `man`. Wow! I know this is a lot to take in, but this is the base on what we will build on. Also feel free to turn to the internet for more information and tutorial there is a lot more information there.
+
 ### Things to install
 
 So before we start you will obviously need access to a computer with a `bash` terminal. To verify if you use the `bash` terminal you can type
@@ -38,7 +40,7 @@ you are good to go. Once you have verify that you are using the right shell, you
 
 if you get this
 
-![]()
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/python_terminal.png)
 
 congratulations Python is already install! Make sure that the version of Python is superior or equal to `Python 3.8`, you check the version just by reading the first line. Example, in the photo which is the output I get when I type and enter `python3` in my terminal, you can read `Python 3.8.8 (default, Apr 13, 19:58:26)` which means that my Python version is 3.8.8. So I am good to go.
 
