@@ -20,7 +20,7 @@ What is the terminal? It is an interface that permits (most of the time) to comm
 
 This is what my terminal on my laptop looks like
 
-![]()
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/terminal.png)
 
 ### Things to install
 
@@ -38,7 +38,7 @@ you are good to go. Once you have verify that you are using the right shell, you
 
 if you get this
 
-![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/python_terminal.png)
+![]()
 
 congratulations Python is already install! Make sure that the version of Python is superior or equal to `Python 3.8`, you check the version just by reading the first line. Example, in the photo which is the output I get when I type and enter `python3` in my terminal, you can read `Python 3.8.8 (default, Apr 13, 19:58:26)` which means that my Python version is 3.8.8. So I am good to go.
 
