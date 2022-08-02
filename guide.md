@@ -3,7 +3,7 @@
 
 ## What is this for
 
-This guide is a walkthrough the utilization of a Python package for seed to voxel correlation analysis.
+This guide is a walkthrough the utilisation of a Python package for seed to voxel correlation analysis.
 
 
 ## For whom is this for?
@@ -14,7 +14,7 @@ Any user who want to make a seed to voxel correlation analysis with little to ze
 ## Before starting 
 
 ### Things you should know before starting
-Most of the things we see together in this tutorial uses the terminal and some terminal command. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc. you get move to the next section (Things to install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
+Most of the things we will see together in this tutorial use the terminal and some terminal command. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc. you get move to the next section (Things to install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
 
 What is the terminal? It is an interface that permits (most of the time) to command your computer via command line (like little instructions/orders you give to your computer). This is a very simple explanation, it is a lot more complicated, but I will not enter the details.
 
@@ -22,13 +22,27 @@ This is what my terminal on my laptop looks like
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/terminal.png)
 
-So there is a couple of commands that will be usefull through out this tutorial or through your utilization of this package. The first command is `ls` and `ls -a`. `ls` is the command and `-a` is an option. Generally speaking commands have many different option and arguments which are two different things. `ls` is to list a directory given as an argument or if no argument is given it will list the directory you are at the moment when you call `ls`. A very nice thing in the terminal is the  `--help` option which give all sort of information about the command you called with the `--help` option. So you could type `ls --help` and the terminal will spill out a bunch of information on `ls` and how to use it. So if you tap `ls --help` and press `Enter` you will see that the `-a` option `do not ignore entries starting with .` which means that `ls` will list everything in the directory even the files starting with a `.`. Basically, you will have a list of everything in the directory. One more thing you can also type `man ls` this will print out the manual (this is what `man` stands for) of the `ls` or any other command you put after the `man`. Wow! I know this is a lot to take in, but this is the base on what we will build on. Also feel free to turn to the internet for more information and tutorial there is a lot more information there.
-
-`cd /a/give/path` this code make you move to a different directory in your computer. Directories are location in your computer where your folders and files are located. I will explain both `cd` and directories in a single example. So let us use my Music folder on my computer. First thing when I open a terminal it is showing 
+So there is a couple of commands that will be useful throughout this tutorial or through your utilisation of this package. The first is `cd /a/give/path`, this code make you move to a different directory in your computer. Directories are location in your computer where your folders and files are located. I will explain both `cd` and directories in a single example. So let us use my Music folder on my computer. First thing when I open a terminal it is showing 
 
 `(base) clauderic@LinuxTop:~$` 
 
-the `(base)` part is not so important here. `clauderic` refers to a user (obviously me) and this user is `@` (at) `LinuxTop` the name of my computer. Finally, when I open the terminal, I am located at `~` from the `clauderic` user `@` the `LinuxTop`. `~` represented the home of user `clauderic`. In this location (`~`) there is many folders, you know the classics (Documents, Downloads, Music, Desktop, Videos, Pictures, etc.). So if I want to go to the music folder I will need to move from where I am to the Music directory which is the inside of music folder. So I would type `cd ~/Music/` this would translate to change directory (`cd`) to `~/Music/` (`~` is equivalent to `/home/clauderic/` which is the directory I am at when opening my terminal. Then `/Music/` is the directory containing all of my music). This is want happened 
+the `(base)` part is not so important here. `clauderic` refers to a user (obviously me) and this user is `@` (at) `LinuxTop` the name of my computer. Finally, when I open the terminal, I am located at `~` from the `clauderic` user `@` the `LinuxTop`. `~` represented the home of user `clauderic`. In this location (`~`) there is many folders, you know the classics (Documents, Downloads, Music, Desktop, Videos, Pictures, etc.). So if I want to go to the music folder I will need to move from where I am to the Music directory which is the inside of Music folder. So I would type `cd ~/Music/` this would translate to change directory (`cd`) to `~/Music/` (`~` is equivalent to `/home/clauderic/` which is the directory I am at when opening my terminal. Then `/Music/` is the directory containing all of my music). Let us recap with pictures.
+
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/cd_terminal.png)
+
+In the first line I am at `~` then I change directory with `cd`. On the second line I am at `~/Music/`. I changed directory!
+
+In the file manager/explorer (you know the thing you use when you want go look at the file in your computer). I started here
+
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/home_file_manager.png)
+
+This is the `~` or `/home/clauderic` in the terminal. After I change directory with `cd` I move to
+
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/music_file_manager.png)
+
+This is the `~/Music/`. So what I just did with the `cd ~/Music/` is essentially the same thing as clicking in my file manager on the Music tab (the tab on the left of the pictures).
+
+The second command is `ls` and `ls -a`. `ls` is the command and `-a` is an option. Generally speaking commands have many different option and arguments which are two different things. `ls` is to list a directory given as an argument or if no argument is given it will list the directory you are at the moment when you call `ls`. A very nice thing in the terminal is the  `--help` option which give all sort of information about the command you called with the `--help` option. So you could type `ls --help` and the terminal will spill out a bunch of information on `ls` and how to use it. So if you tap `ls --help` and press `Enter` you will see that the `-a` option `do not ignore entries starting with .` which means that `ls` will list everything in the directory even the files starting with a `.`. Basically, you will have a list of everything in the directory. One more thing you can also type `man ls` this will print out the manual (this is what `man` stands for) of the `ls` or any other command you put after the `man`. Wow! I know this is a lot to take in, but this is the base on what we will build on. Also feel free to turn to the internet for more information and tutorial there is a lot more information there. Just for good practice, let us go back to the example with the Music folder (the picture just above). If after doing `cd ~/Music` I did `ls` what would I get? Well it is simple enough, I would get two thing : Album Cover and Music (I know it is confusing I have a folder name Music inside another folder also called Music, I have my reason I swear) because they are the only two things in this directory.
 
 ### Things to install
 
