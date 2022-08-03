@@ -14,20 +14,20 @@ Any user who want to make a seed to voxel correlation analysis with little to ze
 
 
 ## Content
-- [Things to do first](##Before starting)
-	- [Useful things to know before starting](###Things you should know before starting)
-	- [Required installation](###Things to install)
-	- [Optional installation](###Optional installation)
-- [How to run the code](##So it begins)
-	- [The script](###Script)
-	- [The package](###Package)
-- [Docker container](##Docker container)
+- [Things to do first](#before-starting)
+	- [Useful things to know before starting](#things-you-should-know-before-starting)
+	- [Required installation](#things-to-install)
+	- [Optional installation](#optional-installation)
+- [How to run the code](#so-it-begins)
+	- [The script](#script)
+	- [The package](#package)
+- [Docker container](#docker-container)
 
 
 ## Before starting 
 
 ### Things you should know before starting
-Most of the things we will see together in this tutorial use the terminal and some terminal command. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc. you get move to the [next section](# Things to install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
+Most of the things we will see together in this tutorial use the terminal and some terminal command. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc. you get move to the [next section](#things-to-install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
 
 What is the terminal? It is an interface that permits (most of the time) to command your computer via command line (like little instructions/orders you give to your computer). This is a very simple explanation, it is a lot more complicated, but I will not enter the details.
 
@@ -59,7 +59,7 @@ The second command is `ls` and `ls -a`. `ls` is the command and `-a` is an optio
 
 There will be more command in the rest of the tutorial but, we deal with them when we will see them.
 
-I will not go in super detail, but let us learn a little bit about Python. If you are super familiar with Python or even just familiar with it you can skip this part and go to the [next section](# Things to install). Python is a procedural programming, what this means you ask. Well, without going into crazy detail, this just means that the program will read a line of code do what is on the line and move to the next line of code (it is more complicated than that). So for example if have this code in Python
+I will not go in super detail, but let us learn a little bit about Python. If you are super familiar with Python or even just familiar with it you can skip this part and go to the [next section](#things-to-install). Python is a procedural programming, what this means you ask. Well, without going into crazy detail, this just means that the program will read a line of code do what is on the line and move to the next line of code (it is more complicated than that). So for example if have this code in Python
 
 ```python
 print("hello")
