@@ -2,15 +2,15 @@
 
 
 
-## What is this for
+## What is this for?
 
-This guide is a walkthrough the utilisation of a Python package for seed to voxel correlation analysis.
+This guide is a walkthrough of the utilisation of a Python package for seed to voxel correlation analysis.
 
 
 
 ## For whom is this for?
 
-Any user who want to make a seed to voxel correlation analysis with little to zero experienced in programming in general. If you have experience in programming you can still stick around, you will still learn how to use the package and maybe more!
+Any user who wants to do a seed to voxel correlation analysis with little to no experience in programming in general. If you have experience in programming, you can still stick around. You will still learn how to use the package and maybe more!
 
 
 ## Content
@@ -27,39 +27,39 @@ Any user who want to make a seed to voxel correlation analysis with little to ze
 ## Before starting 
 
 ### Things you should know before starting
-Most of the things we will see together in this tutorial use the terminal and some terminal command. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc. you get move to the [next section](#things-to-install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
+Most of the things we will see together in this tutorial use the terminal and some terminal commands. So if you are already familiar with `cd`, `ls`, `sudo apt-get`, etc., you can move to the [next section](#things-to-install). If you think that the terminal is the thing that started the Terminator, you might want to stick around while I explain a couple of things.
 
-What is the terminal? It is an interface that permits (most of the time) to command your computer via command line (like little instructions/orders you give to your computer). This is a very simple explanation, it is a lot more complicated, but I will not enter the details.
+What is the terminal? It is an interface that permits you (most of the time) to command your computer via command line (like little instructions/orders you give to your computer). This is a very simple explanation. It is a lot more complicated, but I will not go into the details.
 
-This is what my terminal on my laptop looks like (it is normal if your is different than mine, I changed the colour and all)
+This is what my terminal on my laptop looks like (it is normal if yours is different than mine, I changed the colour and all).
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/terminal.png)
 
-So there is a couple of commands that will be useful throughout this tutorial or through your utilisation of this package. The first is `cd /a/give/path`, this code make you move to a different directory in your computer. Directories are location in your computer where your folders and files are located. I will explain both `cd` and directories in a single example. So let us use my Music folder on my computer. First thing when I open a terminal it is showing 
+So there are a couple of commands that will be useful throughout this tutorial or through your usage of this package. The first is `cd /a/give/path`. This code make you move to a different directory on your computer. Directories are locations on your computer where your folders and files are located. I will explain both `cd` and directories in a single example. So let us use my Music folder on my computer. First thing, when I open a terminal, it is showing 
 
 `(base) clauderic@LinuxTop:~$` 
 
-the `(base)` part is not so important here. `clauderic` refers to a user (obviously me) and this user is `@` (at) `LinuxTop` the name of my computer. Finally, when I open the terminal, I am located at `~` from the `clauderic` user `@` the `LinuxTop`. `~` represented the home of user `clauderic`. In this location (`~`) there is many folders, you know the classics (Documents, Downloads, Music, Desktop, Videos, Pictures, etc.). So if I want to go to the music folder I will need to move from where I am to the Music directory which is the inside of Music folder. So I would type `cd ~/Music/` this would translate to change directory (`cd`) to `~/Music/` (`~` is equivalent to `/home/clauderic/` which is the directory I am at when opening my terminal. Then `/Music/` is the directory containing all of my music). Let us recap with pictures.
+the `(base)` part is not so important here. `clauderic` refers to a user (obviously me), and this user is `@` (at) `LinuxTop` the name of my computer. Finally, when I open the terminal, I am located at `~` from the `clauderic` user `@` the `LinuxTop`. `~` represent the home of user `clauderic`. In this location (`~`) there are many folders. You know the classics (Documents, Downloads, Music, Desktop, Videos, Pictures, etc.). So if I want to go to the music folder I will need to move from where I am to the Music directory which is the inside of Music folder. So I would type `cd ~/Music/` this would translate to change directory (`cd`) to `~/Music/` (`~` is equivalent to `/home/clauderic/` which is the directory I am at when opening my terminal. Then `/Music/` is the directory containing all of my music). Let us recap with pictures.
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/cd_terminal.png)
 
-In the first line I am at `~` then I change directory with `cd`. On the second line I am at `~/Music/`. I changed directory!
+In the first line, I am at `~` then I change directory with `cd`. On the second line I am at `~/Music/`. I changed the directory!
 
-In the file manager/explorer (you know the thing you use when you want go look at the file in your computer). I started here
+In the file manager/explorer (you know the thing you use when you want to go look at the file in your computer), I started here
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/home_file_manager.png)
 
-This is the `~` or `/home/clauderic` in the terminal. After I change directory with `cd` I move to
+This is the `~` or `/home/clauderic` in the terminal. After I change directories with `cd` I move to
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/music_file_manager.png)
 
 This is the `~/Music/`. So what I just did with the `cd ~/Music/` is essentially the same thing as clicking in my file manager on the Music tab (the tab on the left of the pictures).
 
-The second command is `ls` and `ls -a`. `ls` is the command and `-a` is an option. Generally speaking commands have many different option and arguments which are two different things. `ls` is to list a directory given as an argument or if no argument is given it will list the directory you are at the moment when you call `ls`. A very nice thing in the terminal is the  `--help` option which give all sort of information about the command you called with the `--help` option. So you could type `ls --help` and the terminal will spill out a bunch of information on `ls` and how to use it. So if you tap `ls --help` and press `Enter` you will see that the `-a` option `do not ignore entries starting with .` which means that `ls` will list everything in the directory even the files starting with a `.`. Basically, you will have a list of everything in the directory. One more thing you can also type `man ls` this will print out the manual (this is what `man` stands for) of the `ls` or any other command you put after the `man`. Wow! I know this is a lot to take in, but this is the base on what we will build on. Also feel free to turn to the internet for more information and tutorial there is a lot more information there. Just for good practice, let us go back to the example with the Music folder (the picture just above). If after doing `cd ~/Music` I did `ls` what would I get? Well it is simple enough, I would get two thing : Album Cover and Music (I know it is confusing I have a folder name Music inside another folder also called Music, I have my reason I swear) because they are the only two things in this directory.
+The second command is `ls` and `ls -a`. `ls` is the command, and `-a` is an option. Generally speaking, commands have many different options and arguments, which are two different things. `ls` is to list a directory given as an argument, or if no argument is given, it will list the directory you are in the moment when you call `ls`. A very nice thing in the terminal is the  `--help` option, which gives all sorts of information about the command you called with the `--help` option. So you could type `ls --help` and the terminal will spill out a bunch of information on `ls` and how to use it. So if you tap `ls --help` and press `Enter` you will see that the `-a` option `do not ignore entries starting with .` which means that `ls` will list everything in the directory, even the files starting with a `.`. Basically, you will have a list of everything in the directory. One more thing, you can also type `man ls` this will print out the manual (this is what `man` stands for) of the `ls` or any other command you put after the `man`. Wow! I know this is a lot to take in, but this is the base on what we will build on. Also feel free to turn to the internet for more information and tutorial there is a lot more information there. Just for good practice, let us go back to the example with the Music folder (the picture just above). If after doing `cd ~/Music` I did `ls` what would I get? Well, it is simple enough. I would get two things : Album Cover and Music (I know it is confusing, I have a folder named Music inside another folder also called Music, I have my reason, I swear) because they are the only two things in this directory.
 
-There will be more command in the rest of the tutorial but, we deal with them when we will see them.
+There will be more commands in the rest of the tutorial, but we deal with them when we see them.
 
-I will not go in super detail, but let us learn a little bit about Python. If you are super familiar with Python or even just familiar with it you can skip this part and go to the [next section](#things-to-install). Python is a procedural programming, what this means you ask. Well, without going into crazy detail, this just means that the program will read a line of code do what is on the line and move to the next line of code (it is more complicated than that). So for example if have this code in Python
+I will not go into super detail, but let us learn a little bit about Python. If you are super familiar with Python, or even just familiar with it, you can skip this part and go to the [next section](#things-to-install). Python is a procedural programming, what this means you ask. Well, without going into crazy detail, this just means that the programme will read a line of code, do what is on the line, and move to the next line of code (it is more complicated than that). So, for example, if have this code in Python
 
 ```python
 print("hello")
@@ -72,7 +72,7 @@ hello
 3
 ```
 
-Next, variables are like the *x* in algebra in high school you give it a value (a number, a word, a character, etc.) than Python understand that when you write *x* else where in the code you actually meant to use the value attributed to the variable. Do not worry you can use different name for your many variables than *x* (actually the name of the variable should describe for what you will use it for, but with a simple and short name). Let us look at a simple example.
+Next, variables are like the *x* in algebra in high school. You give it a value (a number, a word, a character, etc.), and Python understands that when you write *x* else where in the code, you actually mean to use the value attributed to the variable. Do not worry you can use different name for your many variables than *x* (actually the name of the variable should describe for what you will use it for, but with a simple and short name). Let us look at a simple example.
 ```python
 message = "hello my name is clauderic"
 pi = 3.14
@@ -85,7 +85,7 @@ hello my name is clauderic
 3.14
 ```
 
-In programming there is what we call conditional statement. It uses special keyword (this means you cannot use this words as variable names) such as `if`, `elif`, `else`, `and` and `or` plus logical operators such as 
+In programming, there is what we call a conditional statement. It uses special keywords (this means you cannot use these words as variable names) such as `if`, `elif`, `else`, `and` and `or` plus logical operators such as 
 `==` (equal) :  `1 == 1` is `True`and  where `1 == 2` is `False`
 `!=` (not equal) : `1 != 1` is `False` and where `1 != 2` is `True`
 `>` (greater than) : `2 > 1` is `True` and where `1 > 2` is `False`, but also `1 > 1` is `False` too
@@ -93,15 +93,15 @@ In programming there is what we call conditional statement. It uses special keyw
 `>=` (greater or equal than) : `2 >= 1` is `True` and where `1 >= 2` is `False`, but `1 >= 1` is `True`
 `<=` (smaller or equal than) : `1 <= 2` is `True` and where `2 <= 1` is `False`, but `1 <= 1` is `True`
 
-The way it work is what you can call the if then else, if *a* is true then do *b* else do *c*. An example will clarify things.
+The way it works is what you can call the "if then else", if *a* is true then do *b* else do *c*. An example will clarify things.
 ```python
 x = 1
 if x == 1:
-	print("x equal 1")
+	print("x equals 1")
 else:
 	print("x is different than 1")
 ```
-For output we would get
+For output, we would get
 
 `x equal 1`
 
@@ -109,10 +109,10 @@ But if you changed `x = 1` to `x = 2` the output would be
 
 `x is different than 1`
 
-So in this example if `x == 1` is `True` then `print("x equal 1")` else `print("x is different than 1")`.
+So in this example, if `x == 1` is `True` then `print("x equals 1")` else `print("x is different than 1")`.
 The `elif` is just to add another condition to verify before going to the `else` option.
 
-Something really cool in most programming language (except few like Haskell and Prolog) have loops. Loops lets you repeat code for a certain number of time or until a event happens. Again there is some special keywords such as `for` and `while`. I will only explain the `for` loop, but feel free to go on the internet if you are curious about the `while` loop. The `for` will do want you specify it to do for a certain number of time. Let us look at an example.
+Something really cool in most programming languages (except a few like Haskell and Prolog) has loops. Loops let you repeat code for a certain number of times or until an event happens. Again, there are some special keywords such as `for` and `while`. I will only explain the `for` loop, but feel free to go on the internet if you are curious about the `while` loop. The `for` will do what you specify it to do for a certain number of times. Let us look at an example.
 ```python
 for i in range(0,10):
 	print(i)
@@ -130,27 +130,27 @@ The output would be
 8
 9
 ```
-So what happened here. Essentially I told the `for` loop to iterate on `i` which is in the range from [0, 10[ when the `for` loop has reach the end of his range it stops. For each iteration it run the same line of code the `print(i)` which print what `i` is equal to which is the range from [0, 10[, so `i` is `0` then `1` then `2`, etc. until `9` 
+So what happened here. Essentially, I told the `for` loop to iterate on `i` which is in the range from [0, 10[. When the `for` loop has reached the end of its range, it stops. For each iteration it runs the same line of code the `print(i)` which print what `i` is equal to, which is the range from [0, 10[, so `i` is `0` then `1` then `2`, etc. until `9` 
 
-Finally, just like the math you about in high school you can do function. Well of course the function in programming might be very different than the function we used to do in high school. Let us look at a simple example.
+Finally, just like the math you did in high school, you can do function. Well, of course, the functions in programming might be very different than the functions we used to do in high school. Let us look at a simple example.
 ```python
 def addOne(x):
 	sum = x + 1
 	print(sum)
 ```
-So, in this example I define (the keyword is `def`) a function named `addOne` which takes one argument (`x`). The function will add 1 to the number I give as argument and then print the result of this addition. So, if I call the function like this
+So, in this example, I define (the keyword is `def`) a function named `addOne` which takes one argument (`x`). The function will add 1 to the number I give as an argument and then print the result of this addition. So, if I call the function like this
 ```python
 addOne(2)
 ```
 The output will be
 `3`
-That is the end of what I wanted to show on Python, feel free again to go on the internet if you want to understand more about it. I know it is a lot to take in, here's a cat programming just to lift your spirit up!
+That is the end of what I wanted to show on Python. Feel free again to go on the internet if you want to understand more about it. I know it is a lot to take in. Here's a cat coding just to lift your spirits up!
 
 ![](https://c.tenor.com/K8ntBUZtCyAAAAAC/mooi.gif)
 
 
 ### Things to install
-So before we start you will obviously need access to a computer with a `bash` terminal. To verify if you use the `bash` terminal you can type
+So before we start, you will obviously need access to a computer with a `bash` terminal. To verify if you use the `bash` terminal, you can type
 
 ​	`echo $SHELL` (`echo` is a command that let you 'print', so here we 'print' what shell do we use)
 
@@ -158,7 +158,7 @@ in your terminal and if you get
 
 ​	`/bin/bash`
 
-you are good to go. Once you have verify that you are using the right shell, you will need to install Python if it's not already install. You can run in terminal
+you are good to go. Once you have verified that you are using the right shell, you will need to install Python if it's not already installed. You can run in terminal
 
 ​	`python` or `python3` (`python` and `python3` are also commands)
 
@@ -166,7 +166,7 @@ if you get this
 
 ![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/python_terminal.png)
 
-congratulations Python is already install! Make sure that the version of Python is superior or equal to `Python 3.8`, you check the version just by reading the first line. Example, in the photo which is the output I get when I type and enter `python3` in my terminal, you can read `Python 3.8.8 (default, Apr 13, 19:58:26)` which means that my Python version is 3.8.8. So I am good to go.
+congratulations Python is already installed! Make sure that the version of Python is superior or equal to `Python 3.8`. You check the version just by reading the first line. For example, in the photo, which is the output I get when I type and enter `python3` in my terminal, you can read `Python 3.8.8 (default, Apr 13, 19:58:26)` which means that my Python version is 3.8.8. So I am good to go.
 
 Alternatively, you can check your Python version with a terminal command
 
@@ -176,15 +176,15 @@ you will get an output resembling this in your terminal
 
 ​	`Python 3.8.8` (in my case)
 
-Again if your Python is superior or equal to `Python 3.8` everything is good!
+Again, if your Python is superior or equal to `Python 3.8` everything is good!
 
-If all of the above didn't work, which means you probably don't have Python 3.8 or more, you will need to install it. 
+If all of the above didn't work, which means you probably don't have Python 3.8 or more, you will need to install it.
 
-To install thing with terminal there is a command (I am sure you did not see that one coming). Generally it will be something like this `sudo apt-get install something` (replace something by what you want). A key element here is the `sudo`, this keyword essentially ask for computer owner privilege, you are about to install something on the computer so the owner might like to know what it is before. If you are the computer owner no problem the terminal will ask you to enter the computer owner password which is your (the one you use to login).
+To install things with the terminal there is a command (I am sure you did not see that one coming). Generally, it will be something like this `sudo apt-get install something` (replace something with what you want). A key element here is the `sudo`, this keyword essentially asks for computer owner privilege. You are about to install something on the computer, so the owner might like to know what it is before. If you are the computer owner, no problem. The terminal will ask you to enter the computer owner's password, which is yours (the one you use to login).
 
-So we want to install Python. Easy enough just need to tap `sudo apt-get install python3`, enter the password of the computer owner. The terminal ask you question to answer you just need to tap `y` for yes or `n` for no and tap `Enter`. I know I did not talk about the `apt-get install` think but this part is dependent on the package manager you use, generally Ubuntu  base distro (or distribution, I am on Linux Mint which is based on Ubuntu) use the `apt` package manager. For Mac OS and Windows system it will probably be different. So look on the internet for your way to install packages on your terminal.
+So we want to install Python. Easy enough. you just need to tap `sudo apt-get install python3`, enter the password of the computer owner. The terminal asks you a question to answer. You just need to tap `y` for yes or `n` for no and tap `Enter`. I know I did not talk about the `apt-get install` thing, but this part is dependent on the package manager you use. Generally Ubuntu base distro (or distribution; I am on Linux Mint, which is based on Ubuntu) uses the `apt` package manager. For Mac OS and Windows systems, it will probably be different. So look on the internet for a way to install packages on your terminal.
 
-Finally, the last thing we need to make we have install is the `pip` package. `pip` is the package installer for Python, so it installs Python package. This tutorial is about using a Python package for seed to voxel correlation so we better get the thing that allows us to install Python package. Just like we did before, we will check if `pip` is install with the `--version`. In the terminal type `pip --version`, if you get something along those lines
+Finally, the last thing we need to make sure we have installed is the `pip` package. `pip` is the package installer for Python, so it installs Python packages. This tutorial is about using a Python package for seed to voxel correlation, so we better get the thing that allows us to install Python packages. Just like we did before, we will check if `pip` is installed with the `--version`. In the terminal, type `pip --version`, if you get something along those lines
 
 ​	`pip 21.2.4 from /home/clauderic/anaconda3/lib/python3.8/site-packages/pip (python 3.8)`
 
@@ -442,7 +442,7 @@ def plotting_correlaitons(seed_to_voxel_correlations_img, seed,
 
 ```
 
-I know it looks like it is a lot, but our goal here is just run the code with help of the script. The way these three things work together is pretty simple. The `script.py` is the cook with a recipe, he needs the ingredients and kitchen tools. The `batch.json` is all of the ingredients needed. The `seed_voxel.py` is the kitchen tools. So the cook (`script.py`) with his recipe will take a look at his ingredients (`btach.json`) and will use his ingredients in conjonction with his kitchen tools (`seed_voxel.py`) to cook (run/execute the code) a beautiful meal (the output, the seed to voxel correlation).
+I know it looks like it is a lot, but our goal here is just run the code with help of the script. The way these three things work together is pretty simple. The `script.py` is the cook with a recipe, he needs the ingredients and kitchen tools. The `batch.json` is all of the ingredients needed. The `seed_voxel.py` is the kitchen tools. So the cook (`script.py`) with his recipe will take a look at his ingredients (`batch.json`) and will use his ingredients in conjunction with his kitchen tools (`seed_voxel.py`) to cook (run/execute the code) a beautiful meal (the output, the seed to voxel correlation).
 
 ![](https://c.tenor.com/VROTealR-l0AAAAC/that-is-delicious-chef-ramsay.gif)
 
