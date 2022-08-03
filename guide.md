@@ -434,14 +434,30 @@ def plotting_correlaitons(seed_to_voxel_correlations_img, seed,
 
 ```
 
-I know it looks like it is a lot, but our goal here is just run the code with help of the script. The way these three things work together is pretty simple. The `script.py` is the cook with a recipe, he needs the ingredients and kitchen tools. The `batch.json` is all of the ingredients needed.. The `seed_voxel.py` is the kitchen tools. So the cook (`script.py`) with his recipe will take a look at his ingredients (`btach.json`) and will use his ingredients in conjonction with his kitchen tools (`seed_voxel.py`) to cook (run/execute the code) a beautiful meal (the output, the seed to voxel correlation).
+I know it looks like it is a lot, but our goal here is just run the code with help of the script. The way these three things work together is pretty simple. The `script.py` is the cook with a recipe, he needs the ingredients and kitchen tools. The `batch.json` is all of the ingredients needed. The `seed_voxel.py` is the kitchen tools. So the cook (`script.py`) with his recipe will take a look at his ingredients (`btach.json`) and will use his ingredients in conjonction with his kitchen tools (`seed_voxel.py`) to cook (run/execute the code) a beautiful meal (the output, the seed to voxel correlation).
 
 ![](https://c.tenor.com/VROTealR-l0AAAAC/that-is-delicious-chef-ramsay.gif)
 
-The way it really works is a bit more difficult, but I sure you will understand. `script.py` needs a `.json` file containing all the arguments that the `seed_voxel.py` will use as arguments to his functions. Plus, `script.py` has a seed to voxel correlation workflow written in it. So if you do not like the workflow or need to change because your workflow is different feel free to changes things up.
+The way it really works is a bit more difficult, but I sure you will understand. `script.py` needs a `.json` file containing all the arguments that the `seed_voxel.py` will use as arguments to his functions. Plus, `script.py` has a seed to voxel correlation workflow written in it. It is in the `script.py` that the function from the `seed_voxel.py` are called from. So if you do not like the workflow or need to change because your workflow is different feel free to changes things up. The `batch.json` is what we (Xanthy and I) use for our seed to voxel correlation, you can totally modify the values of those variables, but do not (this is super duper important) change their names or the their value type (changing a number for a string). It might have been complicated to understand everything, I will rephrase it this way. The `script.py` reads the `batch.json` (or any `.json`), the `script.py` calls function from `seed_voxel.py` in a certain order (workflow/pipeline) and he passes the values from the `batch.json` file as argument to those function as he calls them.
 
+Finally, how to run the bloody thing, well it is pretty simple. You simply need to open a terminal move yourself to the directory where the three files are (`script.py`, `batch.json` and `seed_voxel.py`) and type
 
+​	`python3 script.py --batch batch.json`
+
+press `Enter` and voilà. Note that like we have seen you can modify the `batch.json` file you can also create a new with a different name (but with the same structure, change only the values) and do the exact same thing just change the `batch.json` for your file and you are good to go. It is really cool because you could make different `.json` file for different project and always have the exact same values each time you execute the program. Also, you could give the `.json` you used for a paper and saying that you used this seed to voxel correlation package in conjunction with the `.json` file and people could execute exactly what you did. Enough said on the script.
 
 ### Package
+There is nothing much to being said on the packaging itself, it is mostly file use so that you can install the package with install and that I could uploaded it on TestPyPi. You do not really have anything to modify here.
 
 ## Docker container
+Finally, if you want to run everything in control environment (computer environment) there is a Dockerfile which can be use to create a Docker container that you could use to run the package inside the Docker container. So open a terminal move to the location of the Dockerfile then type
+
+​	`docker build -t my_container .`
+
+press `Enter` and let it do his thing. It might take a little bit of time. Let us now look at exactly what happend here. `docker` is the command to let know the computer that we talk about Docker container. `build` (you guest it) build the image of the container. The `-t` is an option just like any other command in terminal and like for other commad we can use the `--help` for information. The info tells us that the `-t` is for naming the image and that it is optional (I personaly think that naming your image is a good practice). The `my_container` is just the name I gave to the container, you could name whatever you would like. Finally, the  `.` is the directory where the Dockerfile I want to use for the `build` is located. The `.` can be use in terminal, it refers to the current location your terminal is at the moment. Because I told you to move to the location where the Dockerfile his and we need this path, the `.` refers to this path where you are right which is the corresponding path to the Dockerfile. Now that you have the image, we need to create the container. Type
+
+
+​	`docker run -it -v $(pwd):/home/ my_container`
+
+
+
