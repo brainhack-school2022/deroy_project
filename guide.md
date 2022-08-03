@@ -13,6 +13,16 @@ This guide is a walkthrough the utilisation of a Python package for seed to voxe
 Any user who want to make a seed to voxel correlation analysis with little to zero experienced in programming in general. If you have experience in programming you can still stick around, you will still learn how to use the package and maybe more!
 
 
+## Content
+- [Things to do first](# Before starting)
+	- [Useful things to know before starting](# Things you should know before starting)
+	- [Required installation](#Things to install)
+	- [Optional installation](# Optional installation)
+- [How to run the code](# So it begins)
+	- [The script](# Script)
+	- [The package](# Package)
+- [Docker container](# Docker container)
+
 
 ## Before starting 
 
@@ -120,7 +130,7 @@ The output would be
 8
 9
 ```
-So what happend here. Essentially I told the `for` loop to iterate on `i` which is in the range from [0, 10[ when the `for` loop has reach the end of his range it stops. For each iteration it run the same line of code the `print(i)` which print what `i` is equal to which is the range from [0, 10[, so `i` is `0` then `1` then `2`, etc. till `9` 
+So what happened here. Essentially I told the `for` loop to iterate on `i` which is in the range from [0, 10[ when the `for` loop has reach the end of his range it stops. For each iteration it run the same line of code the `print(i)` which print what `i` is equal to which is the range from [0, 10[, so `i` is `0` then `1` then `2`, etc. until `9` 
 
 Finally, just like the math you about in high school you can do function. Well of course the function in programming might be very different than the function we used to do in high school. Let us look at a simple example.
 ```python
@@ -134,13 +144,12 @@ addOne(2)
 ```
 The output will be
 `3`
-That is the end of what I wanted to show on Python, feel free again to go on the internet if you want to understand more about it. I know it is a lot to take in, heres a cat programming just to lift your spirit up!
+That is the end of what I wanted to show on Python, feel free again to go on the internet if you want to understand more about it. I know it is a lot to take in, here's a cat programming just to lift your spirit up!
 
 ![](https://c.tenor.com/K8ntBUZtCyAAAAAC/mooi.gif)
 
 
 ### Things to install
-
 So before we start you will obviously need access to a computer with a `bash` terminal. To verify if you use the `bash` terminal you can type
 
 ​	`echo $SHELL` (`echo` is a command that let you 'print', so here we 'print' what shell do we use)
@@ -188,7 +197,6 @@ Finally we need to install the package we will use., because `pip` is install th
 We are done with all the installation!
 
 ### Optional installation
-
 If you would like to get the repository (the entirety of the code and resources) of this project, you could use `git` because the code is available on GitHub. So you will need to have `git` on your computer. Note that you could download a `zip` file containing all the repository, but it is more fun with `git`.
 To check if you have `git` on your machine you could easily do what we did for Python. So type in your terminal
 
@@ -438,13 +446,13 @@ I know it looks like it is a lot, but our goal here is just run the code with he
 
 ![](https://c.tenor.com/VROTealR-l0AAAAC/that-is-delicious-chef-ramsay.gif)
 
-The way it really works is a bit more difficult, but I sure you will understand. `script.py` needs a `.json` file containing all the arguments that the `seed_voxel.py` will use as arguments to his functions. Plus, `script.py` has a seed to voxel correlation workflow written in it. It is in the `script.py` that the function from the `seed_voxel.py` are called from. So if you do not like the workflow or need to change because your workflow is different feel free to changes things up. The `batch.json` is what we (Xanthy and I) use for our seed to voxel correlation, you can totally modify the values of those variables, but do not (this is super duper important) change their names or the their value type (changing a number for a string). It might have been complicated to understand everything, I will rephrase it this way. The `script.py` reads the `batch.json` (or any `.json`), the `script.py` calls function from `seed_voxel.py` in a certain order (workflow/pipeline) and he passes the values from the `batch.json` file as argument to those function as he calls them.
+The way it really works is a bit more difficult, but I sure you will understand. `script.py` needs a `.json` file containing all the arguments that the `seed_voxel.py` will use as arguments to his functions. Plus, `script.py` has a seed to voxel correlation workflow written in it. It is in the `script.py` that the function from the `seed_voxel.py` are called from. So if you do not like the workflow or need to change because your workflow is different feel free to changes things up. The `batch.json` is what we (Xanthy and I) use for our seed to voxel correlation, you can totally modify the values of those variables, but do not (this is super duper important) change their names or the their value type (changing a number for a string). It might have been complicated to understand everything, I will rephrase it this way. The `script.py` reads the `batch.json` (or any `.json`), the `script.py` calls function from `seed_voxel.py` in a certain order (workflow/pipeline) and he passes the values from the `batch.json` file as argument to those function as he calls them. One important thing about the `batch.json` or any `.json` that you will create. There is three variables that are for directory path, the two first : `path_fmri_file` and `path_confound_file` should be a string to the path to the folder containing your fmri data and the other one your confound file (both may have the same path). The last one, the `save_path` should be the path where you would like to save the output data created by the code.
 
 Finally, how to run the bloody thing, well it is pretty simple. You simply need to open a terminal move yourself to the directory where the three files are (`script.py`, `batch.json` and `seed_voxel.py`) and type
 
 ​	`python3 script.py --batch batch.json`
 
-press `Enter` and voilà. Note that like we have seen you can modify the `batch.json` file you can also create a new with a different name (but with the same structure, change only the values) and do the exact same thing just change the `batch.json` for your file and you are good to go. It is really cool because you could make different `.json` file for different project and always have the exact same values each time you execute the program. Also, you could give the `.json` you used for a paper and saying that you used this seed to voxel correlation package in conjunction with the `.json` file and people could execute exactly what you did. Enough said on the script.
+press `Enter` and voilà. Note that like we have seen you can modify the `batch.json` file you can also create a new with a different name (but with the same structure, change only the values) and do the exact same thing just change the `batch.json` for your file and you are good to go. It is really cool because you could make different `.json` file for different project and always have the exact same values each time you execute the program. Also, you could give the `.json` you used for a paper and saying that you used this seed to voxel correlation package in conjunction with the `.json` file and people could execute exactly what you did.
 
 ### Package
 There is nothing much to being said on the packaging itself, it is mostly file use so that you can install the package with install and that I could uploaded it on TestPyPi. You do not really have anything to modify here.
@@ -454,10 +462,13 @@ Finally, if you want to run everything in control environment (computer environm
 
 ​	`docker build -t my_container .`
 
-press `Enter` and let it do his thing. It might take a little bit of time. Let us now look at exactly what happend here. `docker` is the command to let know the computer that we talk about Docker container. `build` (you guest it) build the image of the container. The `-t` is an option just like any other command in terminal and like for other commad we can use the `--help` for information. The info tells us that the `-t` is for naming the image and that it is optional (I personaly think that naming your image is a good practice). The `my_container` is just the name I gave to the container, you could name whatever you would like. Finally, the  `.` is the directory where the Dockerfile I want to use for the `build` is located. The `.` can be use in terminal, it refers to the current location your terminal is at the moment. Because I told you to move to the location where the Dockerfile his and we need this path, the `.` refers to this path where you are right which is the corresponding path to the Dockerfile. Now that you have the image, we need to create the container. Type
+press `Enter` and let it do his thing. It might take a little bit of time. Let us now look at exactly what happened here. `docker` is the command to let know the computer that we talk about Docker container. `build` (you guest it) build the image of the container. The `-t` is an option just like any other command in terminal and like for other command we can use the `--help` for information. The info tells us that the `-t` is for naming the image and that it is optional (I personally think that naming your image is a good practice). The `my_container` is just the name I gave to the container, you could name whatever you would like. Finally, the  `.` is the directory where the Dockerfile I want to use for the `build` is located. The `.` can be use in terminal, it refers to the current location your terminal is at the moment. Because I told you to move to the location where the Dockerfile his and we need this path, the `.` refers to this path where you are right which is the corresponding path to the Dockerfile. Now that you have the image, we need to create the container. Type
 
 
 ​	`docker run -it -v $(pwd):/home/ my_container`
 
+press `Enter`, so `docker` has it change, we are still telling the computer that we are working with Docker. `run` is command of Docker we give it two option `-it` and `-v`.  By looking at the `docker run --help` we find that `-it` is actually two different option put together. `-i` is for interactive mode, basically we want to be able to interact with the container. `-t` refers to TTY which is a console (terminal). By putting them together what we get is an interactive terminal with the docker container. The `-v` by looking in the documentation let us bind mount a volume essentially we want our container to have access to a directory for our host machine (your physical computer) with the container. We need to specify the host directory and then the container directory with this form `/host/machine/directory/:/container/directory` (replace the directory by real one). I would suggest that you always use `/home/` for the container because you might not know what the directories of the container look like. The `$(pwd)` is a way to pass the current directory of the terminal to the command line, in this case `.` does not work because `-v` want an absolute path which `.` is not. Finally, we give the command the image name to make the container of this image, so `my_container` might be different for you if you have given a different name during the `docker build -t my_container .` command we did before. We are now "in" the container
 
+![](https://raw.githubusercontent.com/brainhack-school2022/deroy_project/main/picture/docker_container.png)
 
+We have now sort of a new terminal, it is the terminal of the container. You can navigate and us all the command just like we did with our computer terminal. One thing to remember is the path you mount to the container with the `-v` option. You should mount a directory containing your fmri and your confound file, so you could have access to these files within the container.
