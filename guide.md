@@ -14,14 +14,14 @@ Any user who want to make a seed to voxel correlation analysis with little to ze
 
 
 ## Content
-- [Things to do first](# Before starting)
-	- [Useful things to know before starting](# Things you should know before starting)
-	- [Required installation](#Things to install)
-	- [Optional installation](# Optional installation)
-- [How to run the code](# So it begins)
-	- [The script](# Script)
-	- [The package](# Package)
-- [Docker container](# Docker container)
+- [Things to do first](##Before starting)
+	- [Useful things to know before starting](###Things you should know before starting)
+	- [Required installation](###Things to install)
+	- [Optional installation](###Optional installation)
+- [How to run the code](##So it begins)
+	- [The script](###Script)
+	- [The package](###Package)
+- [Docker container](##Docker container)
 
 
 ## Before starting 
