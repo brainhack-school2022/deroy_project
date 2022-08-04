@@ -86,11 +86,17 @@ hello my name is clauderic
 ```
 
 In programming, there is what we call a conditional statement. It uses special keywords (this means you cannot use these words as variable names) such as `if`, `elif`, `else`, `and` and `or` plus logical operators such as 
+
 `==` (equal) :  `1 == 1` is `True`and  where `1 == 2` is `False`
+
 `!=` (not equal) : `1 != 1` is `False` and where `1 != 2` is `True`
+
 `>` (greater than) : `2 > 1` is `True` and where `1 > 2` is `False`, but also `1 > 1` is `False` too
+
 `<` (smaller than) : `1 < 2` is `True` and where `2 < 1` is `False`, but also `1 < 1` is `False`
+
 `>=` (greater or equal than) : `2 >= 1` is `True` and where `1 >= 2` is `False`, but `1 >= 1` is `True`
+
 `<=` (smaller or equal than) : `1 <= 2` is `True` and where `2 <= 1` is `False`, but `1 <= 1` is `True`
 
 The way it works is what you can call the "if then else", if *a* is true then do *b* else do *c*. An example will clarify things.
